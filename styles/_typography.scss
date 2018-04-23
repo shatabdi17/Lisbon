@@ -1,0 +1,21 @@
+a {
+    text-decoration: none;
+}
+
+p,ul,h1,h2,h3 {
+    padding: 0;
+    margin: 0;
+}
+
+ul {
+    list-style: none;
+    display: inline-block;
+}
+h1 {
+    font-size: 3.6rem;
+    line-height: 2.6rem;
+    text-transform: uppercase;
+}
+.event-text-container {
+    color:$white;
+}

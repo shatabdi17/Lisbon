@@ -1,0 +1,19 @@
+// @mixin fontSizer($scale) {
+//     font-size: $scale * 1px;
+//     font-size: ($scale / 10) * 1rem;
+// }
+
+// html {
+//     font-size: 62.5%;
+// }
+
+// body {
+//     font-family: $bodyFont;
+//     color: $brandColour;
+//     @include fontSizer(16);
+// }
+
+$pink: #e9578a;
+$purple: #463f8c;
+$black: #1c1c1c;
+$white: #ffffff;

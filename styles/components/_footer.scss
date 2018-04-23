@@ -1,0 +1,27 @@
+footer {
+    background: #070606;
+    color: $white;
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 2.8rem;
+    text-align: center;
+    
+}
+.footer-text-container {
+    padding: 3rem 0;
+}
+.footer-nav {
+    padding: 2rem 0 4rem 0;
+}
+.footer-nav a {
+    color: #acacac;
+    padding-right: 3rem;
+    text-transform: uppercase;
+    &:hover {
+        color: $white;
+    }
+}
+
+.footer-brand-name {
+    color:$pink;
+}
