@@ -16,7 +16,7 @@ p {
 
 .wrapper {
     width: 75%;
-    max-width: 1920px;
+    max-width: 1170px;
     margin: 0 auto;
 }
 
@@ -335,9 +335,7 @@ p {
         a:hover {
              color:$pink;
         }
-    
 }
-
 
 /*************** EVENT SECTION STARTS *******************/
 .event-section {
@@ -504,7 +502,6 @@ figcaption {
          }
 }
 
-
 /************* EVENT SPEAKER SECTION ENDS ****************/
 /************* PRICING SECTION STARTS ****************/
 
@@ -517,6 +514,7 @@ figcaption {
 .pricing-section-text-container {
    
     padding-top: 10rem;
+    
 }
 .pricing-section-text-container h1,
 .pricing-section-text-container p {
@@ -623,6 +621,28 @@ figcaption {
     border-top: 1px dashed lightgray;
 }
 
+.pricing-card-item:nth-of-type(2) {
+    position: relative;
+    overflow: hidden;
+}
+.optimum-plan-banner {
+    position: absolute;
+    border: 1px solid $purple;
+    background-color: $purple;
+    transform: rotate(45deg);
+    top: 26px;
+    left: 206px;
+    width: 198px;
+}
+
+.banner-text {
+     color: $white;
+     font-size: 14px;
+     font-weight: 500;
+     line-height: 26px;
+     padding: 3px 0;
+
+}
 /************* PRICING SECTION ENDS ****************/
 
 
@@ -701,17 +721,6 @@ figcaption {
     }
      
 }
-
-// .event-speaker-item::before {
-//       content: "";
-//     // border :1px dotted lightgray;
-//    display: block;
-//     width: 31px;
-//     border: 1px dashed lightgray;
-//     margin-right: 15px;
-//     height:0;
-//     margin-top:30px;
-// }
 
 .event-span {
     color: #787878;
@@ -1034,7 +1043,60 @@ figcaption {
     }
 /*************** SECTION ABOVE FOOTER ENDSSSSS *******************/
 
-/******************************* MEDIA QUERIES **********************/
+/***************** Hamburger Menu **************/
+.toggle {
+    padding: 2rem;
+    top: 1em;
+    right: 0.5em;
+    cursor: pointer;
+    display: none;
+}
+.hamburger {
+    display: none;
+}
+.hamburger-container {
+    padding: 8px;
+    padding-top: 0;
+}
+
+.hamburger,
+.hamburger::before,
+.hamburger::after {
+    content: '';
+    // display: block;
+    background: #EBEBD3;
+    height: 3px;
+    width: 2em;
+    border-radius: 3px;
+    transition: all ease-in-out 350ms;
+    display: none;
+}
+
+.navv {
+    display: block;
+}
+
+.hamburger::before {
+    transform: translateY(-7px);
+}
+
+.hamburger::after {
+    transform: translateY(4px);
+}
+
+.open .hamburger {
+    transform: rotate(45deg);
+}
+
+.open .hamburger::before {
+    display: none;
+}
+
+.open .hamburger::after {
+    transform: translateY(-1px) rotate(-90deg);
+ }
+
+/******************************* MEDIA QUERIES STARTS **********************/
 
 
 @media (max-width: 940px) {
@@ -1203,44 +1265,253 @@ figure {
         font-size:12px;
     }
 }
+// MEDIA QUERIES 480PX STARTS
+
+
+@media (max-width: 480px) {
+    .header-container {
+        margin-top: 20px;
+    }
+    .header-container img {
+        width: 30%;
+    }
+    .top-nav {
+        display: none;
+        position: absolute;
+        right: 60px; 
+        background: rgba(0, 0, 0, 0.9);
+        width: 90%;
+        text-align: center;     
+        top: 110px;
+        height: 60vh;
+        left: 25px;
+    }
+    .top-nav li {
+        display: block;
+        padding: 10px 0;
+    }
+    .icon-s {
+        margin-left: 200px;
+    }
+    .top-nav a {
+        font-size: 14px;
+    }
+    
+
+    .hamburger {
+        display: block;
+        position: relative;
+        top: 60px;
+    }
+
+    .hamburger,
+    .hamburger::before,
+    .hamburger::after {
+        content: ''; 
+        display: block;
+    }
+    .toggle {
+        display: block;
+    }
+    .main-header {
+        height: 80vh;
+    }
+    .header-arrow {
+        width: 18px;
+        height: 70px;
+    }
+    .secondary-header-info {
+        width: 100%;
+        margin-left: 40px;
+    }
+    .secondary-header-clock {
+        margin:0 auto;
+    }
+    .clock-components p:nth-of-type(2) {
+        margin-top: 10px;
+        font-size: 12px;
+        font-weight: bold;
+}
+.about-this-events-section {
+    margin-bottom: 2rem;
+}
+ .our-event-speakers {
+    margin-top: 7rem;
+}
+.event-text-container {
+    padding: 4rem 0;
+}
+.email-container {
+    flex-wrap: wrap;
+}
+.event-email {    
+    margin-bottom: 3rem;
+
+}
+.event-email, .event-button {
+    border-radius: 5px;
+}
+
+figure {
+    width: 58%;
+    margin:0 auto;
+    margin-bottom: 30px;
+}
+.event-schedule-inner-container {
+    flex-wrap: wrap;
+    margin: 0 15px;;
+}
+.event-schedule-calendar {
+    margin: 0 auto;
+    width: 200px;
+    padding-bottom: 30px;
+}
+.latest-news-article-item {
+    width: 100%;
+    margin-left: 10px;
+}
+
+.latest-news-article-item:nth-of-type(4),
+.latest-news-article-item:nth-of-type(2),
+.latest-news-article-item:nth-of-type(5),
+.latest-news-article-item:nth-of-type(6) {
+    width: 370px;
+    height: 300px;
+}
+
+.latest-news-article-item:nth-of-type(even) {
+    padding-top: 50px;
+}
+
+.latest-news-article-item:nth-of-type(even){
+    
+    p:nth-of-type(2) {
+        padding: 4rem 0;
+    }
+}
+
+
+.signup-email-container {
+    flex-wrap: wrap;
+
+}
+.signup-email {
+    width: 100%;
+    margin: 0 0 20px 20px;
+}
+.signup-button {
+    border-radius: 5px;
+}
+.footer-nav a {
+    padding-right: 10px;
+    font-size: 10px;
+}
+}
+
+@media (max-width: 320px) {
+.header-text-container {
+    
+    padding-top: 2rem;
+    p {
+        font-size: 12px;
+        line-height: 16px;
+        padding: 2rem 0 1rem 0;
+    }
+    h1 {
+        font-size: 14px;
+        font-weight: 800;
+        line-height: 46px;
+        padding-bottom: 2rem;
+    }
+}
+
+.buy-ticket-button {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+    width: 214px;
+    height: 52px; 
+    padding: 1rem 2rem;
+    
+}
 
 
 
+.secondary-header-clock {
+    padding-top: 10px;
+}
+
+.clock-components p:nth-of-type(1) {
+
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 16px;
+}
+
+.clock-components p:nth-of-type(2) {
+
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+}
+
+.numbers {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 10px;
+    padding: 4px 6px;
+ }
+
+.secondary-header-buttons a,
+.event-button {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+    padding: 1rem 2rem;
+   
+}
+
+.about-this-events-text-container h1,
+.event-text-container h1,
+.event-speaker-text-container h1,
+.pricing-section-text-container h1,
+.event-schedule-text-container h1,
+.latest-news-text-container h1
+ {
+    font-size: 28px;
+}
+
+.event-email {
+    width: 80%;
+}
+
+figure {
+    width: 80%;
+}
+.pricing-card-container {
+     width: 296px;
+    margin: 0;
+    margin-top: 60px;
+    background: transparent;
+    // margin-left: -52px;
+}
+.pricing-card-item, .pricing-card-item ul {
+    width: 320px;
+    
+}
+
+.quote-section-text p {
+    font-size: 12px;
+}
+.quote-section-text h3 {
+    font-size: 20px;
+}
+.signup-container h1 {
+    font-size:22px;
+}
+.footer-nav a {
+    font-size: 8px;
+}
+}
 
 
-
-// #trapezoid {
-//     border-bottom: 100px solid red;
-//     border-left: 50px solid transparent;
-//     border-right: 50px solid transparent;
-//     height: 0;
-//     width: 100px;
-
-
-// rotate 45 degree
-// }
-
-// css
-// 1. make ul for the entire gallery
-// 2.in each li one figure element.
-// 3.inside figure elemnt, there will be imag and a figcaption
-// 4.set image to display block and max-width 100%;
-// 5. figure elemrnt to be relative, and ficaption position absolute with top, bottom,right,and left 0;
-// 6.make two divs within figcaption..
-
-
-
-// .footer-fav {
-//     width: 0;
-//     height: 0;
-//     border-left: 25px solid transparent;
-//     border-right: 25px solid transparent;
-//     border-bottom: 25px solid $bottomFooter;
-//     display: flex;
-//     flex-flow: row wrap;
-//     justify-content: center;
-//     margin: 0 auto;
-//     .fa {
-//         margin-top: 15px;
-//     }
-// }
